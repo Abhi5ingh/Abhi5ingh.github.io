@@ -16,13 +16,13 @@ body {
 .hero {
     text-align: center;
     padding: 100px 0;
-    background: linear-gradient(to right, #f5f5dc);
+    background: linear-gradient(to right, #f5f5dc,#f5f5df);
     color: white;
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     border: 5px solid white;
     object-fit: cover; /* Ensures the image covers the container */
