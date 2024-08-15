@@ -7,6 +7,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url('bg.webp');
+    background-attachment: fixed; 
+    background-size: cover;
 }
 
 header {
@@ -38,6 +41,7 @@ section {
     max-width: 800px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjusts the width of the boxes */
 }
 
 section h2 {
@@ -51,6 +55,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    width: 100%; /* Ensures footer spans the entire width */
-    margin-top: 20px; /* Adds some spacing between content and footer */
+    width: 100%;
+    margin-top: 20px;
 }
