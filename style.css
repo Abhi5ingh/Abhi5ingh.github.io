@@ -16,15 +16,18 @@ body {
 .hero {
     text-align: center;
     padding: 100px 0;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
+    background: linear-gradient(to right, #f5f5dc);
     color: white;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 5px solid white;
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Center the image within the container */
+    overflow: hidden; /* Hide any overflowed content */
     margin-bottom: 20px;
 }
 
