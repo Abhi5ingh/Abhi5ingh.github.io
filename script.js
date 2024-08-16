@@ -7,3 +7,8 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         });
     });
 });
+// script.js
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
