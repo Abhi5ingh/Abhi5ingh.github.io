@@ -44,7 +44,7 @@ body {
     height: 100%;
     background: url('herobg.jpg');
     background-size: cover;
-    filter: none;
+    filter: blur(10px);
     z-index: 0;
     pointer-events: none; /* Ensure the overlay doesn't interfere with content */
 }
