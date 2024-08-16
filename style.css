@@ -45,14 +45,14 @@ body {
     background: url('herobg.jpg');
     background-size: cover;
     filter: blur(10px);
-    z-index: 0;
+    z-index: -1;
     opacity: 0.6;
     pointer-events: none; /* Ensure the overlay doesn't interfere with content */
 }
 }
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     max-width: 800px;
     margin: 0 auto;
 }
