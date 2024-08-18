@@ -71,7 +71,12 @@ body {
     margin: 10px 0;
 }
 .hero h1, .hero p {
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+
 }
 
 .bio {
