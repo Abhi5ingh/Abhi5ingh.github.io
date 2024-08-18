@@ -73,7 +73,7 @@ body {
 .hero h1, .hero p {
     background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
     color: #ffffff;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 5px;
     display: inline-block;
 
