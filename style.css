@@ -173,28 +173,28 @@ section {
     width: 80%;
 }
 
-#internship {
+#showcase {
   background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent layer over the background */
   padding: 40px 20px;
 }
-#internship {
+#showcase {
   text-align: center;
   margin: 0 auto;
 }
 
-#internship h2 {
+#showcase h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-#internship video {
+#showcase video {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 20px auto;
   display: block;
 }
 
-#internship button {
+#showcase button {
   padding: 10px 20px;
   font-size: 1rem;
   margin-top: 20px;
@@ -205,7 +205,7 @@ section {
   border-radius: 5px;
 }
 
-#internship button:hover {
+#showcase button:hover {
   background-color: #0056b3;
 }
 
@@ -219,7 +219,7 @@ section {
   height: 100%; 
   overflow: auto; 
   background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgba(0,0,0,0.8); 
   padding-top: 60px;
 }
 
@@ -229,7 +229,7 @@ section {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; 
-  max-width: 700px; /* Adjust based on your design */
+  max-width: 900px; /* Adjust based on your design */
 }
 
 .close-btn {
