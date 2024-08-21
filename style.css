@@ -174,7 +174,7 @@ section {
 }
 
 #showcase {
-  background: rgba(0, 0, 0, 1); /* Optional: Adds a semi-transparent layer over the background */
+  background: rgba(0, 0, 0, 0.01); /* Optional: Adds a semi-transparent layer over the background */
   padding: 40px 20px;
 }
 #showcase {
