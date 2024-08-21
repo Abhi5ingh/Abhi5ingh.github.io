@@ -108,17 +108,19 @@ body {
 .links {
     margin-top: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content:center;
+    flex-wrap: wrap;
 }
 
 .links a {
     display: inline-block;
-    margin: 0 5px;
+    margin: 5px;
+    padding: 8px 16px;
     font-size: 1rem;
     text-decoration: none;
     color: #0072ff;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease;
 }
 
 /* .links a:hover {
