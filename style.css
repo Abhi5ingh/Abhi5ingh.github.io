@@ -13,12 +13,14 @@ body {
 }
 
 .hero {
-    text-align: center;
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center the content horizontally */
     padding: 100px 20px;
-/*     background: linear-gradient(to right, #f5f5dc, #f5f5df); */
-/*     color: #333; */
     position: relative;
     overflow: hidden;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    text-align: left; /* Align text to the left */
 }
 
 
@@ -44,7 +46,7 @@ body {
     z-index: 1;
     color: #f0f0f0;
     max-width: 800px;
-    margin: 0 auto;
+    margin-left: 20px;
 }
 
 .profile-pic {
@@ -56,19 +58,26 @@ body {
     object-position: center; 
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+/*     margin-bottom: 20px; */
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    color: #f0f0f0;
     margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 .hero p {
     font-size: 1.2rem;
     color: #f0f0f0;
     margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 .hero h1, .hero p {
     background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
@@ -83,6 +92,12 @@ body {
     font-style: italic;
     margin: 20px 0;
     font-size: 1.1rem;
+    color: #f0f0f0;
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 .links {
     margin-top: 20px;
@@ -206,6 +221,7 @@ button.dark-mode-toggle {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+
     nav ul li {
         display: block;
         margin: 10px 0;
@@ -228,9 +244,18 @@ button.dark-mode-toggle {
     }
 } */
 @media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center text when stacked */
+    }
+
+    .hero-content {
+        margin-left: 0; /* Remove left margin for centered content */
+    }
     .profile-pic {
-        width: 150px;
-        height: 150px;
+        width: 400px;
+        height: 400px;
+        margin-bottom: 20px; /* Space between image and text when stacked */
     }
 
     .hero h1 {
