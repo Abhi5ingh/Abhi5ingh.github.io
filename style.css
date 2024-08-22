@@ -246,7 +246,41 @@ section {
   text-decoration: none;
   cursor: pointer;
 }
+#project {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
 
+#project h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#project p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project-image, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Add space below the image/video */
+}
+
+#project a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#project a:hover {
+  text-decoration: underline;
+}
 
 section h2 {
     border-bottom: 2px solid #333;
