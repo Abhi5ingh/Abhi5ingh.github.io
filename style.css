@@ -13,20 +13,14 @@ body {
   scroll-behavior: smooth;
 }
 
-/* 
-  NAVBAR 
-  Make the navbar text stand out over the hero background
-  by using a semi-transparent background until scrolling.
-*/
+/* Navbar with semi-transparent background */
 #mainNav {
-  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s;
 }
 #mainNav.scrolled {
   background-color: #2A4B3F !important; /* solid forest green on scroll */
 }
-
-/* Make sure navbar text is white on the hero background */
 .navbar-dark .navbar-nav .nav-link {
   color: #fff !important;
 }
@@ -37,7 +31,7 @@ body {
   color: #fff !important;
 }
 
-/* HERO SECTION with your forest-lake background */
+/* Hero section with forest-lake background */
 .hero-section {
   background: url('herobg.jpg') center center/cover no-repeat;
   position: relative;
@@ -57,7 +51,7 @@ body {
   bottom: 0;
   width: 100%;
   line-height: 0;
-  transform: rotate(180deg); /* flips the wave vertically */
+  transform: rotate(180deg);
 }
 .hero-wave svg {
   display: block;
@@ -65,20 +59,8 @@ body {
   height: 100px;
 }
 .hero-wave path {
-  fill: #f4f4f4; /* next section's bg color */
+  fill: #f4f4f4;
 }
-/* Remove the forced width/height and let it scale */
-
-
-.hero-image img {
-
-  width: 100%;
-  max-width: 300px;   /* The largest size on bigger screens */
-  height: auto;       /* Auto-scale the height to avoid cropping */
-  border-radius: 50%; /* Keep it circular */
-  object-fit: cover;  /* Fill the circle nicely */
-}
-
 
 /* Section titles */
 .section-title {
@@ -108,7 +90,7 @@ body {
   transform: translateY(0);
 }
 
-/* Modal Custom Styling */
+/* Modal styling */
 .modal-content {
   border: 3px solid #2A4B3F;
   border-radius: 8px;
@@ -121,4 +103,13 @@ body {
 .modal-body {
   background-color: #fff;
   color: #333;
+}
+
+/* Hero image tweak for mobile scaling */
+.hero-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
