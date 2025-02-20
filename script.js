@@ -1,9 +1,7 @@
 // script.js
 
 document.addEventListener("DOMContentLoaded", function() {
-  // ===========================
   // 1. Navbar background on scroll
-  // ===========================
   const mainNav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -13,9 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // ===========================
   // 2. "Learn More" -> open Bootstrap modal
-  // ===========================
   const moreInfoBtn = document.getElementById('more-info-btn');
   if (moreInfoBtn) {
     moreInfoBtn.addEventListener('click', function() {
@@ -26,16 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // ===========================
   // 3. Dark Mode Toggle
-  // ===========================
   window.toggleDarkMode = function() {
     document.body.classList.toggle('dark-mode');
   };
 
-  // ===========================
   // 4. Scroll-based fade-in
-  // ===========================
   const animateElements = document.querySelectorAll('[data-animate]');
   const animateObserver = new IntersectionObserver(
     (entries) => {
@@ -49,9 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
   );
   animateElements.forEach(el => animateObserver.observe(el));
 
-  // ===========================
   // 5. Auto-play videos in view (optional)
-  // ===========================
   const videos = document.querySelectorAll('video');
   const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
