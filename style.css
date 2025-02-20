@@ -39,7 +39,7 @@ body {
 
 /* HERO SECTION with your forest-lake background */
 .hero-section {
-  background: url('forest-lake.jpg') center center/cover no-repeat;
+  background: url('herobg.jpg') center center/cover no-repeat;
   position: relative;
   min-height: 100vh;
   padding-top: 100px; /* space for navbar */
