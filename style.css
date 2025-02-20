@@ -70,11 +70,13 @@ body {
 /* Remove the forced width/height and let it scale */
 
 
-/* Optionally, you can make it even smaller on very narrow screens */
-@media (max-width: 576px) {
-  .hero-image img {
-    max-width: 220px;
-  }
+.hero-image img {
+
+  width: 100%;
+  max-width: 300px;   /* The largest size on bigger screens */
+  height: auto;       /* Auto-scale the height to avoid cropping */
+  border-radius: 50%; /* Keep it circular */
+  object-fit: cover;  /* Fill the circle nicely */
 }
 
 
