@@ -68,17 +68,7 @@ body {
   fill: #f4f4f4; /* next section's bg color */
 }
 /* Remove the forced width/height and let it scale */
-.hero-image img {
-  /* Remove these if you have them: 
-     width: 300px; 
-     height: 300px; 
-  */
-  width: 100%;
-  max-width: 300px;   /* The largest size on bigger screens */
-  height: auto;       /* Auto-scale the height to avoid cropping */
-  border-radius: 50%; /* Keep it circular */
-  object-fit: cover;  /* Fill the circle nicely */
-}
+
 
 /* Optionally, you can make it even smaller on very narrow screens */
 @media (max-width: 576px) {
