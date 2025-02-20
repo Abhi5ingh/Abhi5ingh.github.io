@@ -70,24 +70,6 @@ body {
   margin: 10px auto 0;
 }
 
-/* Dark mode toggle button */
-.dark-mode-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  background-color: #FFD700; /* gold button */
-  color: #333;
-  padding: 0.7rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  z-index: 999999;
-}
-.dark-mode-toggle:hover {
-  background-color: #ffa;
-}
-
 /* Fade-in animation for data-animate elements */
 [data-animate] {
   opacity: 0;
@@ -97,27 +79,4 @@ body {
 [data-animate].active {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Dark Mode Classes */
-body.dark-mode {
-  background-color: #222;
-  color: #eee;
-}
-body.dark-mode .hero-section {
-  background: url('herobg.jpg') center center/cover no-repeat;
-}
-body.dark-mode .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-body.dark-mode .card {
-  background-color: #333;
-  color: #eee;
-}
-body.dark-mode .modal-content {
-  background-color: #444;
-  color: #eee;
-}
-body.dark-mode footer {
-  background-color: #111 !important;
 }
