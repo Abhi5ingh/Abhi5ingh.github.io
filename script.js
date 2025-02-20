@@ -1,52 +1,60 @@
-// Smooth scroll for nav links
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+// script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  // ===========================
+  // 1. Navbar background on scroll
+  // ===========================
+  const mainNav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      mainNav.classList.add('scrolled');
+    } else {
+      mainNav.classList.remove('scrolled');
     }
   });
-});
 
-// Mobile nav toggle
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-
-navToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
-});
-
-// Modal
-const modal = document.getElementById('showcase-modal');
-const btn = document.getElementById('more-info-btn');
-const closeBtn = document.querySelector('.close-btn');
-
-btn.onclick = function () {
-  modal.style.display = 'block';
-};
-closeBtn.onclick = function () {
-  modal.style.display = 'none';
-};
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
+  // ===========================
+  // 2. "Learn More" -> open Bootstrap modal
+  // ===========================
+  const moreInfoBtn = document.getElementById('more-info-btn');
+  if (moreInfoBtn) {
+    moreInfoBtn.addEventListener('click', function() {
+      const showcaseModal = new bootstrap.Modal(
+        document.getElementById('showcaseModal')
+      );
+      showcaseModal.show();
+    });
   }
-};
 
-// Dark mode
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
+  // ===========================
+  // 3. Dark Mode Toggle
+  // ===========================
+  window.toggleDarkMode = function() {
+    document.body.classList.toggle('dark-mode');
+  };
 
-// Auto-play/pause videos when in view
-document.addEventListener('DOMContentLoaded', function () {
+  // ===========================
+  // 4. Scroll-based fade-in
+  // ===========================
+  const animateElements = document.querySelectorAll('[data-animate]');
+  const animateObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  animateElements.forEach(el => animateObserver.observe(el));
+
+  // ===========================
+  // 5. Auto-play videos in view (optional)
+  // ===========================
   const videos = document.querySelectorAll('video');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.play();
       } else {
@@ -54,7 +62,5 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  videos.forEach((video) => {
-    observer.observe(video);
-  });
+  videos.forEach(video => videoObserver.observe(video));
 });
