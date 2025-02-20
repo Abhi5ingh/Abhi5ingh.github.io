@@ -13,18 +13,33 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Sticky navbar color transition */
+/* 
+  NAVBAR 
+  Make the navbar text stand out over the hero background
+  by using a semi-transparent background until scrolling.
+*/
 #mainNav {
-  background-color: transparent; /* Start transparent */
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
   transition: background-color 0.3s;
 }
 #mainNav.scrolled {
-  background-color: #2A4B3F !important; /* Forest green on scroll */
+  background-color: #2A4B3F !important; /* solid forest green on scroll */
+}
+
+/* Make sure navbar text is white on the hero background */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffd700 !important; /* gold hover */
+}
+.navbar-brand {
+  color: #fff !important;
 }
 
 /* HERO SECTION with your forest-lake background */
 .hero-section {
-  background: url('herobg.jpg') center center/cover no-repeat;
+  background: url('forest-lake.jpg') center center/cover no-repeat;
   position: relative;
   min-height: 100vh;
   padding-top: 100px; /* space for navbar */
@@ -79,4 +94,19 @@ body {
 [data-animate].active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Modal Custom Styling */
+.modal-content {
+  border: 3px solid #2A4B3F;
+  border-radius: 8px;
+}
+.modal-header {
+  background-color: #2A4B3F;
+  color: #fff;
+  border-bottom: none;
+}
+.modal-body {
+  background-color: #fff;
+  color: #333;
 }
