@@ -30,7 +30,9 @@
     <!-- ===== NAVBAR ===== -->
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#hero">Abhishek Singh</a>
+        <a class="navbar-brand fw-bold" href="#hero" id="nav-brand"
+          >Abhishek Singh</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -44,29 +46,46 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#showcase">Current Work</a>
+              <a class="nav-link" href="#hero" id="nav-home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
+              <a class="nav-link" href="#about" id="nav-about">About</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
+              <a class="nav-link" href="#showcase" id="nav-current-work"
+                >Current Work</a
+              >
             </li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience" id="nav-experience"
+                >Experience</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" id="nav-projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education" id="nav-education"
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" id="nav-contact">Contact</a>
+            </li>
           </ul>
+
+          <!-- Translate Button -->
+          <button class="btn btn-outline-light ms-3" id="translate-btn">
+            日本語
+          </button>
         </div>
       </div>
     </nav>
 
     <!-- ===== HERO SECTION ===== -->
     <header id="hero" class="hero-section d-flex align-items-center">
-      <!-- Dark overlay on top of the background image -->
       <div class="hero-overlay"></div>
-
       <div class="container position-relative">
         <div class="row justify-content-center align-items-center">
           <!-- Hero Text -->
@@ -74,9 +93,13 @@
             class="col-lg-6 text-center text-lg-start hero-text mb-5 mb-lg-0"
             data-animate
           >
-            <h1 class="display-4 fw-bold text-white">ABHISHEK SINGH</h1>
-            <h2 class="h4 text-white">Machine Learning &amp; AI Engineer</h2>
-            <p class="lead fst-italic text-white mb-4">
+            <h1 class="display-4 fw-bold text-white" id="hero-title">
+              ABHISHEK SINGH
+            </h1>
+            <h2 class="h4 text-white" id="hero-subtitle">
+              Machine Learning &amp; AI Engineer
+            </h2>
+            <p class="lead fst-italic text-white mb-4" id="hero-tagline">
               "Passionate about harnessing the power of AI to drive innovation and solve
               real-world problems."
             </p>
@@ -85,6 +108,7 @@
                 href="https://www.linkedin.com/in/abhishekk5ingh"
                 target="_blank"
                 class="btn btn-success me-2 mb-2"
+                id="hero-linkedin"
               >
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
@@ -92,6 +116,7 @@
                 href="https://github.com/Abhi5ingh"
                 target="_blank"
                 class="btn btn-success me-2 mb-2"
+                id="hero-github"
               >
                 <i class="fab fa-github"></i> GitHub
               </a>
@@ -99,6 +124,7 @@
                 href="https://huggingface.co/Abhi5ingh"
                 target="_blank"
                 class="btn btn-success mb-2"
+                id="hero-huggingface"
               >
                 <i class="fas fa-robot"></i> Hugging Face
               </a>
@@ -111,12 +137,11 @@
               src="IMG_4538.jpg"
               alt="Abhishek Singh"
               class="rounded-circle border border-3 border-white shadow"
-              style="width:300px; height:300px; object-fit:cover;"
+              style="width:100%; max-width:300px; height:auto; object-fit:cover;"
             />
           </div>
         </div>
       </div>
-
       <!-- Wave Divider -->
       <div class="hero-wave">
         <svg viewBox="0 0 500 150" preserveAspectRatio="none">
@@ -132,18 +157,18 @@
     <section id="about" class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="section-title">About Me</h2>
+          <h2 class="section-title" id="about-title">About Me</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8" data-animate>
-            <p class="mb-3">
+            <p class="mb-3" id="about-text1">
               I am a Machine Learning enthusiast with a keen interest in Generative
               modelling applications. I have a master's degree in Machine Learning and
               Computer Vision, and I am currently working at a Bioscience pharmaceutical
               company in Singapore as an Applied AI Engineer for novel drug discovery for
               Cancer and Autoimmune disease treatments.
             </p>
-            <p>
+            <p id="about-text2">
               This work made me be able to master working on an HPC, Linux environment, get
               more proficient in Python/PyTorch, and be able to fine tune Large models for
               our Applied applications.
@@ -157,11 +182,11 @@
     <section id="showcase" class="py-5">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="section-title">AI-based Drug Engineering</h2>
+          <h2 class="section-title" id="showcase-title">AI-based Drug Engineering</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8" data-animate>
-            <p>
+            <p id="showcase-text">
               Using Generative models for denovo drug synthesis and discovery using models
               like Diffusion based models and LLMs.
             </p>
@@ -193,9 +218,8 @@
     >
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-          <!-- Custom styling in style.css -->
-          <div class="modal-header">
-            <h3 class="modal-title" id="showcaseModalLabel">Showcase Details</h3>
+          <div class="modal-header" id="modal-header">
+            <h3 class="modal-title" id="modal-title">Showcase Details</h3>
             <button
               type="button"
               class="btn-close"
@@ -203,8 +227,8 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <p>
+          <div class="modal-body" id="modal-body">
+            <p id="modal-paragraph">
               During my 6-month tenure in Singapore, I delved deeper into Bioinformatics
               and Microbiology, merging that knowledge with advanced AI/ML techniques to
               pioneer a revolutionary approach to drug discovery. By leveraging
@@ -224,16 +248,16 @@
     <section id="experience" class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="section-title">Experience</h2>
+          <h2 class="section-title" id="experience-title">Experience</h2>
         </div>
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col" data-animate>
             <div class="card h-100 shadow">
               <div class="card-body">
-                <h5 class="card-title text-success">
+                <h5 class="card-title text-success" id="exp1-title">
                   AI Drug Discovery, Hummingbird Bioscience
                 </h5>
-                <p class="card-text">
+                <p class="card-text" id="exp1-text">
                   Working on Diffusion based models and Large Language Model finetuning and
                   applications for advancements in Drug discovery and Cancer treatment.
                 </p>
@@ -243,10 +267,10 @@
           <div class="col" data-animate>
             <div class="card h-100 shadow">
               <div class="card-body">
-                <h5 class="card-title text-success">
+                <h5 class="card-title text-success" id="exp2-title">
                   Data Science Analyst, Yori Shoreditch
                 </h5>
-                <p class="card-text">
+                <p class="card-text" id="exp2-text">
                   Built advanced predictive models (Python &amp; R), performed data cleaning
                   with SQL &amp; Pandas, advanced EDA with NumPy &amp; Matplotlib, and
                   implemented ML algorithms to improve sales prediction accuracy by 30%.
@@ -257,10 +281,10 @@
           <div class="col" data-animate>
             <div class="card h-100 shadow">
               <div class="card-body">
-                <h5 class="card-title text-success">
+                <h5 class="card-title text-success" id="exp3-title">
                   Computer Vision Developer, Sibylline Advisory
                 </h5>
-                <p class="card-text">
+                <p class="card-text" id="exp3-text">
                   Developed &amp; deployed an Agricultural Disease Detection model on AWS
                   using a custom augmented dataset; achieved over 90% accuracy.
                 </p>
@@ -270,10 +294,10 @@
           <div class="col" data-animate>
             <div class="card h-100 shadow">
               <div class="card-body">
-                <h5 class="card-title text-success">
+                <h5 class="card-title text-success" id="exp4-title">
                   Marugame Seimen, London Part-time
                 </h5>
-                <p class="card-text">
+                <p class="card-text" id="exp4-text">
                   Worked as Team leader at one of the busiest Marugame Udon branches in
                   London at Trafalgar Square; learned the Japanese language and culture.
                 </p>
@@ -288,23 +312,23 @@
     <section id="projects" class="py-5">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="section-title">Projects</h2>
+          <h2 class="section-title" id="projects-title">Projects</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8" data-animate>
             <div class="card mb-4 shadow">
               <div class="card-body">
-                <h5 class="card-title text-success">
+                <h5 class="card-title text-success" id="proj1-title">
                   Fashion Garment Synthesis using Diffusion Models
                 </h5>
-                <p class="card-text">
+                <p class="card-text" id="proj1-text1">
                   The Fashion industry is one of the old traditional industries that have
                   shown massive amounts of reluctance to adapt to the changing tides
                   brought by AI. I decided to help reduce the burdens of fashion designers
                   by creating a tool using stable diffusion models to generate any number
                   of garments from just a text prompt or a sketch.
                 </p>
-                <p class="card-text">
+                <p class="card-text" id="proj1-text2">
                   You can read the full research paper
                   <a href="https://arxiv.org/abs/2404.18591" target="_blank">here</a>.
                 </p>
@@ -322,7 +346,7 @@
                 >
                   <source src="sd.mp4" type="video/mp4" />
                 </video>
-                <p class="card-text">
+                <p class="card-text" id="proj1-text3">
                   You can use the model
                   <a
                     href="https://huggingface.co/spaces/Abhi5ingh/fashionsd"
@@ -341,14 +365,14 @@
     <section id="education" class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="section-title">Education</h2>
+          <h2 class="section-title" id="education-title">Education</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8" data-animate>
-            <h5 class="text-success">MSc Degree @ Queen Mary University</h5>
-            <p>Machine Learning for Visual Data Analytics</p>
-            <h5 class="text-success mt-4">B.Tech MNIT Jaipur</h5>
-            <p>Electrical Engineering</p>
+            <h5 class="text-success" id="edu1-title">MSc Degree @ Queen Mary University</h5>
+            <p id="edu1-text">Machine Learning for Visual Data Analytics</p>
+            <h5 class="text-success mt-4" id="edu2-title">B.Tech MNIT Jaipur</h5>
+            <p id="edu2-text">Electrical Engineering</p>
           </div>
         </div>
       </div>
@@ -358,29 +382,36 @@
     <section id="contact" class="py-5">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="section-title">Contact Me</h2>
+          <h2 class="section-title" id="contact-title">Contact Me</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-6" data-animate>
             <p>
-              <strong>Email:</strong>
-              <a href="mailto:abhisteak@gmail.com">abhisteak@gmail.com</a>
+              <strong id="contact-email-label">Email:</strong>
+              <a href="mailto:abhisteak@gmail.com" id="contact-email-link"
+                >abhisteak@gmail.com</a
+              >
             </p>
             <p>
-              <strong>LinkedIn:</strong>
-              <a href="https://www.linkedin.com/in/abhishekk5ingh" target="_blank"
+              <strong id="contact-linkedin-label">LinkedIn:</strong>
+              <a
+                href="https://www.linkedin.com/in/abhishekk5ingh"
+                target="_blank"
+                id="contact-linkedin-link"
                 >LinkedIn Profile</a
               >
             </p>
             <p>
-              <strong>GitHub:</strong>
-              <a href="https://github.com/Abhi5ingh" target="_blank"
+              <strong id="contact-github-label">GitHub:</strong>
+              <a href="https://github.com/Abhi5ingh" target="_blank" id="contact-github-link"
                 >GitHub Profile</a
               >
             </p>
             <p>
-              <strong>Download Resume:</strong>
-              <a href="abhi_tech_uk.pdf" target="_blank">Download here</a>
+              <strong id="contact-resume-label">Download Resume:</strong>
+              <a href="abhi_tech_uk.pdf" target="_blank" id="contact-resume-link"
+                >Download here</a
+              >
             </p>
           </div>
         </div>
@@ -390,7 +421,7 @@
     <!-- ===== FOOTER ===== -->
     <footer class="py-3" style="background-color: #2A4B3F;">
       <div class="container text-center text-white">
-        <p class="mb-0">© 2024 Abhishek Singh. All rights reserved.</p>
+        <p class="mb-0" id="footer-text">© 2024 Abhishek Singh. All rights reserved.</p>
       </div>
     </footer>
 
