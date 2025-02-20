@@ -105,11 +105,4 @@ body {
   color: #333;
 }
 
-/* Hero image tweak for mobile scaling */
-.hero-image img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-}
+
