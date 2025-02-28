@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Experience
       "experience-title": "Experience",
       "exp1-title": "AI Drug Discovery, Hummingbird Bioscience",
-      "exp1-text": "Leveraging diffusion-based models and large language models to accelerate novel therapeutics for cancer and autoimmune diseases. Collaborate with cross-functional teams to pioneer next-gen AI-driven drug design.",
+      "exp1-text": "Leveraging diffusion-based models and large language models to accelerate novel therapeutics for cancer and autoimmune diseases. Collaborate with cross-functional teams to pioneer next-gen AI-driven drug design. Click for more.",
       "exp2-title": "Data Science Analyst, Yori Shoreditch",
       "exp2-text": "Developed robust predictive models (Python, R) to enhance sales forecasting by 30%. Performed data cleaning with SQL & Pandas and advanced EDA with NumPy & Matplotlib, driving data-informed business decisions.",
       "exp3-title": "Computer Vision Developer, Sibylline Advisory",
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Experience
       "experience-title": "経験",
       "exp1-title": "AI創薬、ハミングバード・バイオサイエンス",
-      "exp1-text": "Diffusionモデルや大規模言語モデルを活用し、がんや自己免疫疾患の新規治療薬開発を加速。次世代のAI駆動型創薬を推進するため、クロスファンクショナルなチームと協力しています。",
+      "exp1-text": "Diffusionモデルや大規模言語モデルを活用し、がんや自己免疫疾患の新規治療薬開発を加速。次世代のAI駆動型創薬を推進するため、クロスファンクショナルなチームと協力しています。Click for more",
       "exp2-title": "データサイエンスアナリスト、Yori Shoreditch",
       "exp2-text": "PythonとRを用いて強力な予測モデルを構築し、SQLとPandasでデータクリーニング、NumPyとMatplotlibで高度なEDAを実施。売上予測を30%向上させ、データに基づくビジネス判断を促進しました。",
       "exp3-title": "コンピュータビジョン開発者、Sibylline Advisory",
