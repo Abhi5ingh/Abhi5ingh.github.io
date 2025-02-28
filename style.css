@@ -110,3 +110,12 @@ body {
   background-color: #fff;
   color: #333;
 }
+/* Hover effect for cards */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
