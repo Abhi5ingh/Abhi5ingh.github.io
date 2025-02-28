@@ -39,3 +39,9 @@
   background-color: #2A4B3F;
   margin: 8px auto 0;
 }
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* helps remove inline spacing */
+}
+
