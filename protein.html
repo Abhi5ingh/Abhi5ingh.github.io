@@ -17,23 +17,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!-- Google Fonts (optional if you already have in style.css) -->
+    <!-- Google Fonts (optional if already included) -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
 
-    <!-- Your existing style.css (for wave, forest-lake background, etc.) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ===== NAVBAR (optional) ===== -->
-    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- ===== NAVBAR ===== -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.7);">
       <div class="container">
-        <!-- "Back to Home" or your brand -->
-        <a class="navbar-brand fw-bold" href="index.html">
-          <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
+        <!-- "Back to Home" link -->
+        <a class="navbar-brand fw-bold" href="index.html" id="nav-back-home"
+          ><i class="fas fa-arrow-left"></i> Back to Home</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -49,30 +49,29 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <!-- Additional nav items if needed -->
           </ul>
+          <!-- Translate Button -->
+          <button class="btn btn-outline-light ms-3" id="translate-btn">日本語</button>
         </div>
       </div>
     </nav>
 
-    <!-- ===== HERO SECTION (short version) ===== -->
-    <header class="hero-section d-flex align-items-center" style="min-height:60vh;">
-      <!-- Dark overlay from style.css or inline -->
-      <div class="hero-overlay"></div>
+    <!-- ===== HERO SECTION (Simple Gradient + Wave) ===== -->
+    <header class="gradient-hero d-flex align-items-center">
       <div class="container position-relative">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-8 text-center hero-text" data-animate>
-            <h1 class="display-5 fw-bold text-white mb-3">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center text-white hero-text">
+            <h1 class="display-5 fw-bold mb-3" id="hero-title">
               Protein Design &amp; Drug Discovery
             </h1>
-            <p class="text-white fs-5">
-              Learn about my AI-driven approach for designing novel nanobody locks 
-              and accelerating targeted drug discovery.
+            <p class="fs-5" id="hero-subtitle">
+              AI-driven pipelines for designing novel nanobody locks
+              and accelerating targeted therapies.
             </p>
           </div>
         </div>
       </div>
-
-      <!-- Wave Divider (reuse from style.css) -->
-      <div class="hero-wave">
+      <!-- Wave Divider -->
+      <div class="wave-divider">
         <svg viewBox="0 0 500 150" preserveAspectRatio="none">
           <path
             d="M0.00,49.98 C150.00,150.00 349.80,-50.00 500.00,49.98
@@ -82,121 +81,111 @@
       </div>
     </header>
 
-    <!-- ===== MAIN CONTENT SECTION ===== -->
+    <!-- ===== MAIN CONTENT ===== -->
     <section class="py-5 bg-light">
       <div class="container">
-        <!-- Overview -->
-        <div class="row justify-content-center">
+        <!-- Context -->
+        <div class="row justify-content-center mb-5">
           <div class="col-lg-10">
-            <h2 class="section-title mb-4">Context</h2>
-            <p>
-              I’ve been working at Hummingbird Bioscience to explore AI-driven solutions 
-              for protein design and drug discovery. My main focus is on designing novel 
-              nanobody “masks” or “locks” that can selectively activate therapeutic 
-              antibodies in tumor environments, thereby improving precision and minimizing 
+            <h2 class="section-title mb-4" id="context-title">Context</h2>
+            <p id="context-text">
+              I’ve been working at Hummingbird Bioscience to explore AI-driven solutions
+              for protein design and drug discovery. My main focus is on designing novel
+              nanobody “masks” or “locks” that can selectively activate therapeutic
+              antibodies in tumor environments, thereby improving precision and minimizing
               off-target effects.
             </p>
+          </div>
+        </div>
 
-            <hr class="my-5" />
-
-            <!-- Antibody Locks & Problem Statement -->
-            <h2 class="section-title mb-4">Antibody Locks &amp; Problem Statement</h2>
+        <!-- Antibody Locks & Problem Statement -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <h2 class="section-title mb-4" id="antibody-title">
+              Antibody Locks &amp; Problem Statement
+            </h2>
             <p>
-              <strong>Antibody Locks:</strong> A strategy to keep antibodies inactive until 
-              they reach tumor cells. Typically, a peptide “lock” is attached to the 
-              antibody’s antigen-binding site via a cleavable linker that tumor-associated 
-              proteases can cut.
+              <strong id="antibody-locks-label">Antibody Locks:</strong>
+              <span id="antibody-locks-text">
+                A strategy to keep antibodies inactive until they reach tumor cells.
+                Typically, a peptide “lock” is attached to the antibody’s antigen-binding site
+                via a cleavable linker that tumor-associated proteases can cut.
+              </span>
             </p>
             <p>
-              <strong>Nanobody Challenge:</strong> Nanobodies have a single-chain format, 
-              making traditional coiled-coil masking strategies (developed for full-size 
-              antibodies) incompatible. We needed a new approach for attaching a cleavable 
-              lock at the nanobody’s N-terminus without disrupting its stability or binding 
-              functionality.
+              <strong id="nanobody-challenge-label">Nanobody Challenge:</strong>
+              <span id="nanobody-challenge-text">
+                Nanobodies have a single-chain format, making traditional coiled-coil
+                masking strategies (developed for full-size antibodies) incompatible. We
+                needed a new approach for attaching a cleavable lock at the nanobody’s
+                N-terminus without disrupting its stability or binding functionality.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Design Pipeline (Single Flowchart) -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <h2 class="section-title mb-4" id="design-pipeline-title">Design Pipeline</h2>
+            <p id="design-pipeline-intro">
+              Below is an overview of our AI-driven workflow for creating de novo peptide
+              masks targeting the nanobody’s CDR region. This single flowchart illustrates
+              each step, from backbone generation to final validation:
             </p>
 
-            <hr class="my-5" />
-
-            <!-- Design Pipeline with Flowchart -->
-            <h2 class="section-title mb-4">Design Pipeline</h2>
-            <p>
-              Below is an overview of our AI-driven workflow for creating 
-              <em>de novo</em> peptide masks targeting the nanobody’s CDR region:
-            </p>
-
-            <!-- Flowchart image (replace with your actual file) -->
+            <!-- Single Flowchart -->
             <div class="text-center mb-4">
               <img
                 src="flowchart1.png"
-                alt="Design Pipeline Flowchart"
+                alt="Pipeline Flowchart"
                 class="img-fluid border border-success rounded"
-                style="max-width: 700px;"
+                style="max-width: 800px;"
               />
             </div>
 
-            <ol class="mb-5">
-              <li>
-                <strong>Backbone Generation with RFDiffusion</strong><br />
-                Utilized the RFDiffusion model to generate new peptide backbones that could 
-                mask the nanobody’s CDR region. Focused on motif scaffolding and fold 
-                conditioning modes, embedding structural motifs and guiding the final 
-                conformation. Generated over <strong>20,000</strong> possible backbone designs.
-              </li>
-              <li>
-                <strong>Inverse Folding via ProteinMPNN</strong><br />
-                RFDiffusion outputs only 3D backbones, so we used <strong>Sol-MPNN</strong> 
-                to assign functional sequences. Ensured high solubility by biasing out 
-                cysteines and optimizing for stable, hydrophilic designs.
-              </li>
-              <li>
-                <strong>Structure Prediction &amp; Filtering</strong><br />
-                Employed <strong>AlphaFold 2</strong> (with reduced MSA) to confirm each 
-                design’s 3D conformation. Filtered out designs with 
-                <code>RMSD &gt; 5</code> or <code>PAE &gt; 10</code> to keep only the most 
-                reliable structures.
-              </li>
-              <li>
-                <strong>Liability Removal</strong><br />
-                Removed sequences prone to aggregation, PTMs, or undesirable disulfide 
-                bonds (e.g., consecutive identical residues, N-glycosylation motifs, etc.).
-              </li>
-              <li>
-                <strong>Molecular Dynamics (MD) Simulation</strong><br />
-                Performed <strong>50 ns</strong> GROMACS simulations on the shortlisted 
-                designs to validate structural stability, focusing on changes in the 
-                nanobody’s CDR loops. Selected final designs based on stable RMSF/RMSD 
-                metrics and consistent mask–framework contacts.
-              </li>
-            </ol>
+            <p id="pipeline-explanation">
+              <strong>RFDiffusion:</strong> Generates peptide backbones targeting the
+              nanobody’s CDR.<br />
+              <strong>Sol-MPNN:</strong> Assigns functional sequences to ensure solubility
+              and stability.<br />
+              <strong>AF2-fast Filtering:</strong> Validates structures, discarding any with
+              RMSD &gt; 5 or PAE &gt; 10.<br />
+              <strong>Liability De-Risking:</strong> Removes designs prone to aggregation,
+              PTMs, or undesired disulfide bonds.<br />
+              <strong>MD Simulation:</strong> Confirms stability via RMSF/RMSD analysis,
+              finalizing the best candidates.
+            </p>
+          </div>
+        </div>
 
-            <hr class="my-5" />
-
-            <!-- Key Findings -->
-            <h2 class="section-title mb-4">Key Findings</h2>
-            <ul>
+        <!-- Key Findings -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <h2 class="section-title mb-4" id="key-findings-title">Key Findings</h2>
+            <ul id="key-findings-list">
               <li>
-                <strong>CDR Conformational Changes:</strong> The designed peptide masks 
-                successfully induced higher RMSF in the CDR loops, indicating conformational 
-                changes crucial for “locking” the nanobody until protease cleavage.
+                <strong>CDR Conformational Changes:</strong> The designed peptide masks
+                induce higher RMSF in the CDR loops, crucial for “locking” the nanobody
+                until protease cleavage.
               </li>
               <li>
-                <strong>High-Confidence Candidates:</strong> From <strong>80,000</strong> 
-                total sequences (20,000 RFDiffusion backbones × 4 MPNN variants each), only 
-                <strong>30</strong> advanced to MD simulations, and <strong>10</strong> were 
-                deemed suitable for experimental testing.
+                <strong>High-Confidence Candidates:</strong> From 80,000 total sequences,
+                only 30 advanced to MD simulations, and 10 are being tested experimentally.
               </li>
               <li>
-                <strong>Potential Clinical Impact:</strong> This pipeline could accelerate 
-                the discovery of targeted nanobody therapies, enhancing specificity and 
-                minimizing off-target effects in cancer treatment.
+                <strong>Clinical Impact:</strong> This pipeline can accelerate targeted
+                nanobody therapies, reducing off-target effects in cancer treatment.
               </li>
             </ul>
+          </div>
+        </div>
 
-            <hr class="my-5" />
-
-            <!-- Optional MD Graph / RMSF Graph Example -->
-            <h2 class="section-title mb-4">MD Simulation Analysis</h2>
-            <p>
+        <!-- MD Simulation Analysis (Optional Graph) -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <h2 class="section-title mb-4" id="md-analysis-title">MD Simulation Analysis</h2>
+            <p id="md-analysis-text">
               Our RMSF/RMSD analysis highlights how attaching a peptide mask 
               alters the nanobody’s CDR loops:
             </p>
@@ -214,47 +203,42 @@
               loses contact, causing a drop in CDR RMSF values, further confirming the 
               dynamic interplay between the nanobody’s binding loops and the designed mask.
             </p>
+          </div>
+        </div>
 
-            <hr class="my-5" />
-
-            <!-- PDF Link or Embed -->
-            <h2 class="section-title mb-4">Full Details</h2>
-            <p>
+        <!-- PDF Link -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="section-title mb-4" id="full-details-title">Full Details</h2>
+            <p id="full-details-text">
               For a deeper dive, including additional slides and data on the entire pipeline:
             </p>
-            <p>
-              <a
-                href="AI Protein Design & Drug discovery.pdf"
-                target="_blank"
-                class="btn btn-primary"
-              >
-                <i class="fas fa-file-pdf"></i> Download PDF
-              </a>
-            </p>
-            <!-- Or embed the PDF in an iframe if you prefer -->
-            <!--
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe
-                src="AI Protein Design & Drug discovery.pdf"
-                title="Protein Design PDF"
-              ></iframe>
-            </div>
-            -->
+            <a
+              href="AI Protein Design & Drug discovery.pdf"
+              target="_blank"
+              class="btn btn-primary"
+              id="pdf-button"
+            >
+              <i class="fas fa-file-pdf"></i> Download PDF
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FOOTER (optional) ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="py-3" style="background-color: #2A4B3F;">
       <div class="container text-center text-white">
-        <p class="mb-0">© 2024 Abhishek Singh. All rights reserved.</p>
+        <p class="mb-0" id="footer-text">© 2024 Abhishek Singh. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap 5 JS (Popper + Bootstrap) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     ></script>
+
+    <!-- Custom JS for translation, etc. -->
+    <script src="protein-translate.js"></script>
   </body>
 </html>
